@@ -7,7 +7,6 @@ export default class Add extends React.Component {
     this.state = {
       name: '',
       imgurl: '',
-      edit: ''
     }
     this.changeHandler = this.changeHandler.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
