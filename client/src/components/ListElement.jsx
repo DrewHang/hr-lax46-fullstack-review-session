@@ -1,10 +1,24 @@
 import React from 'react';
 
-const ListElement = () =>
-  <span>
-    <div>Julian</div>
-    <img src='https://ca.slack-edge.com/T02DNK3PH-UD0AF2EBH-73605fa7261b-512'></img>
-  </span>
+class ListElement extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      edit: '',
+      clicked: false
+    }
+  }
+
+  render() {
+    return (
+      <span>
+        <div>{this.props.student.name} <button>Edit</button></div>
+        <img src={this.props.student.imgurl}></img>
+      </span>
+    )
+  }
+
+}
 
 
 export default ListElement
