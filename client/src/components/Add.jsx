@@ -24,6 +24,15 @@ export default class Add extends React.Component {
     axios.post(`/api/students`, {
       name: this.state.name
     })
+    .then(() => {
+      this.setState({
+        name: '',
+        imgurl: ''
+      })
+    })
+    .then(() => {
+      alert('Student Added!')
+    })
     .catch(err => {
       console.log(err)
     })
